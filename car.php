@@ -1,0 +1,33 @@
+<?php
+
+class car
+{
+    public $color;
+
+    private $model;
+
+    function setCarModel($month)
+    {
+        if ($month < date('m')) {
+            return $this->model = $month;
+        } else {
+            echo 'Invalid Year!';
+        }
+    }
+
+    function getCarModel()
+    {
+        return $this->model;
+    }
+}
+
+$carObject = new car();
+
+$carObject->color = ' red';
+
+$carObject->setCarModel(05);
+
+echo $carObject->getCarModel();
+
+echo $carObject->color;
+
