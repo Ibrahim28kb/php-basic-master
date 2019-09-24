@@ -11,7 +11,7 @@ class car
         if ($month < date('m')) {
             return $this->model = $month;
         } else {
-            return 'Invalid Month!';
+            echo 'Invalid Month!';
         }
     }
 
