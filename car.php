@@ -3,12 +3,11 @@
 class car
 {
     public $color;
-
     private $model;
 
     function setCarModel($month)
     {
-        if ($month < date('m')) {
+        if ($month < date('n')) {
             return $this->model = $month;
         } else {
             echo 'Invalid Month!';
@@ -22,12 +21,9 @@ class car
 }
 
 $carObject = new car();
-
 $carObject->color = ' red';
+$carObject->setCarModel(07);
 
-$carObject->setCarModel(11);
-
-echo $carObject->getCarModel();
-
-echo $carObject->color;
+echo ' Model : ' . $carObject->getCarModel();
+echo ' Color : ' . $carObject->color;
 
